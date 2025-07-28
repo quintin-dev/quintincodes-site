@@ -1,0 +1,62 @@
+{
+    // Copilot Configuration
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "chat.promptFiles": true,
+    "chat.mcp.enabled": true,
+    
+    // Agent Mode
+    "chat.agent.enabled": true,
+    "chat.agent.maxRequests": 15,
+    "github.copilot.chat.agent.autoFix": true,
+    "github.copilot.chat.agent.runTasks": true,
+    
+    // Advanced Features
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.edits.temporalContext.enabled": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "chat.implicitContext.enabled": true,
+    
+    // Code Quality
+    "github.copilot.editor.enableCodeActions": true,
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+    "github.copilot.chat.generateTests.codeLens": true,
+    
+    // Instructions Locations
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true
+    },
+    "chat.promptFilesLocations": {
+        ".github/prompts": true
+    },
+    
+    // Project-specific instructions
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "text": "Follow the project's coding standards defined in .github/instructions/"
+        },
+        {
+            "text": "Use British English spelling in comments and documentation"
+        },
+        {
+            "text": "Prioritize clean, maintainable, and well-documented code"
+        }
+    ],
+    
+    "github.copilot.chat.testGeneration.instructions": [
+        {
+            "text": "Generate comprehensive tests following the testing standards in .github/instructions/testing.instructions.md"
+        }
+    ],
+    
+    "github.copilot.chat.reviewSelection.instructions": [
+        {
+            "text": "Perform thorough code reviews focusing on security, performance, and maintainability"
+        }
+    ],
+    
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use conventional commits format with clear, descriptive messages"
+        }
+    ]
+}

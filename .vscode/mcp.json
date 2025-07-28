@@ -1,0 +1,107 @@
+{
+  "servers": {
+    "memory-bank-project": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@allpepper/memory-bank-mcp"
+      ],
+      "env": {
+        "MEMORY_BANK_ROOT": "./.memory-bank"
+      }
+    },
+    "chroma-project": {
+      "command": "uvx",
+      "args": [
+        "chroma-mcp",
+        "--client-type",
+        "persistent",
+        "--data-dir",
+        "./.chroma-data"
+      ]
+    },
+    "TalkToFigma": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "cursor-talk-to-figma-mcp@latest"
+      ]
+    },
+    "dbhub-mysql-project": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@bytebase/dbhub",
+        "--transport",
+        "stdio",
+        "--dsn",
+        "mysql://root:MySql1234@localhost:3306/${DATABASE_NAME}?sslmode=disable"
+      ],
+      "env": {
+        "DSN": "mysql://root:MySql1234@localhost:3306/${DATABASE_NAME}?sslmode=disable"
+      }
+    },
+    "dbhub-mysql-readonly": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@bytebase/dbhub",
+        "--transport",
+        "stdio",
+        "--readonly",
+        "--dsn",
+        "mysql://root:MySql1234@localhost:3306/${DATABASE_NAME}?sslmode=disable"
+      ],
+      "env": {
+        "DSN": "mysql://root:MySql1234@localhost:3306/${DATABASE_NAME}?sslmode=disable"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/eddki/Code/Projects/Personal/quintincodes-site"
+      ],
+      "env": {}
+    },
+    "magic-ui": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@magicuidesign/mcp@latest"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--browser",
+        "firefox",
+        "--viewport-size",
+        "1920,1080",
+        "--ignore-https-errors",
+        "--save-trace",
+        "--output-dir",
+        "./playwright-outputs",
+        "--caps",
+        "tabs,pdf,history,wait,files,install"
+      ]
+    },
+    "supabase": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "sbp_64ebed251d8e31189cec8fcf19a0e003a4e78fc0"
+      ]
+    },
+    "tree-sitter": {
+      "command": "mcp-server-tree-sitter",
+      "env": {}
+    }
+  }
+}

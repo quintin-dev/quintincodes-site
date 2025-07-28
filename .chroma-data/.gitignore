@@ -1,0 +1,4 @@
+# Chroma vector database files
+# These are binary files that can be regenerated from source documents
+*
+!.gitignore
