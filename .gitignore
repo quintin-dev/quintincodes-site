@@ -4,6 +4,9 @@
 *.sqlite3
 *.db
 
+# GitHub configuration and instructions (local development setup)
+.github/
+
 # VS Code and Editor Settings
 .vscode/
 .cursor/
